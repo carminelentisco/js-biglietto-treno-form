@@ -5,44 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    
 </head>
 <body>
     
-    <div class="wrapper">
-        <h1 class="title">Calcola il prezzo del tuo biglietto</h1>
+    <div class="page">
+        
+        <!-- Dati utente -->
+        <section>
+            <h1 class="title">Calcola il prezzo del tuo biglietto</h1>
 
-        <div class="dati-input">
-            <div class="row">
-                <div class="col">
-                    <label for="nome">Nome e Cognome</label>
-                    <input id="nome" type="text" 
-                           name="nome"
-                            placeholder="inserisci il tuo nome"
-                    >
+            <div class="dati-input">
+                <div class="dati-input-utente">
+                    <div class="">
+                        <label for="nome">Nome e Cognome</label>
+                        <input id="nome" type="text" 
+                               name="nome"
+                                placeholder="inserisci il tuo nome"
+                        >
+                    </div>
+                    <div class="">
+                        <label for="km">Km da percorrere</label>
+                        <input id="km" type="number" min="1" max="300"
+                               name="km"
+                                placeholder="inserisci i Km"
+                        >
+                    </div>
+                    <div class="">
+                        <label for="fascia-eta">Fascia d'età</label>
+                        <select name="fascia-eta" id="fascia-eta">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col">
-                    <label for="km">Km da percorrere</label>
-                    <input id="km" type="number" min="1" max="300"
-                           name="km"
-                            placeholder="inserisci i Km"
-                    >
-                </div>
-                <div class="col">
-                    <label for="fascia-eta">Fascia d'età</label>
-                    <select name="fascia-eta" id="fascia-eta">
-                        <option value="minorenne">Minorenne</option>
-                        <option value="maggiorenne">Maggiorenne</option>
-                        <option value="over65">Over 65</option>
-                    </select>
+    
+                <div class="row">
+                    <button class="btn" id="bottoneGenera">Genera</button>
+                    <button class="btn" id="bottoneAnnulla">Annulla</button>
                 </div>
             </div>
+        </section>
 
-            <div class="row">
-                <button class="btn" id="bottoneGenera">Genera</button>
-                <button class="btn" id="bottoneAnnulla">Annulla</button>
-            </div>
-        </div>
-
+        <!-- Creazione bigletto -->
         <section id="biglietto" class="hidden">
             <h2 class="title">Il tuo biglietto</h2>
 
