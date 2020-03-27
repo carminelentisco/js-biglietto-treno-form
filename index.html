@@ -9,86 +9,100 @@
 </head>
 <body>
     
-    <div class="page">
+    <div class="container">
         
-        <!-- Dati utente -->
-        <section>
+        <!-- Header page -->
+        <header class="header">
             <h1 class="title">Calcola il prezzo del tuo biglietto</h1>
+        </header>
 
-            <div class="dati-input">
-                <div class="dati-input-utente">
-                    <div class="">
-                        <label for="nome">Nome e Cognome</label>
-                        <input id="nome" type="text" 
-                               name="nome"
-                                placeholder="inserisci il tuo nome"
-                        >
-                    </div>
-                    <div class="">
-                        <label for="km">Km da percorrere</label>
-                        <input id="km" type="number" min="1" max="300"
-                               name="km"
-                                placeholder="inserisci i Km"
-                        >
-                    </div>
-                    <div class="">
-                        <label for="fascia-eta">Fascia d'età</label>
-                        <select name="fascia-eta" id="fascia-eta">
-                            <option value="minorenne">Minorenne</option>
-                            <option value="maggiorenne">Maggiorenne</option>
-                            <option value="over65">Over 65</option>
-                        </select>
-                    </div>
-                </div>
+        <main class="content-page">
+           
+            <!-- Dati utente -->
+            <section class="box">
+               
+                    <div class="box-formatting">
+                    
+                        <!-- Dati utente -->
+                        <div class="dati-utente">
+                            
+                            <!-- Nome e Cognome -->
+                            <div class="paddig_topBottom-10">
+                                <label for="nome">Nome e Cognome</label>
+                                <input id="nome" class="input-format" type="text"  name="nome" placeholder="inserisci il tuo nome">
+                            </div>
+                            
+                            <!-- Km -->
+                            <div class="paddig_topBottom-10">
+                                <label for="km">Km da percorrere</label>
+                                <input id="km" class="input-format" type="number" min="1" max="300" name="km"  placeholder="inserisci i Km">
+                            </div>
+                            
+                            <!-- Età -->
+                            <div class="paddig_topBottom-10">
+                                <label for="fascia-eta">Fascia d'età</label>
+                                <select name="fascia-eta" id="fascia-eta" class="input-format">
+                                    <option value="minorenne">Minorenne</option>
+                                    <option value="maggiorenne">Maggiorenne</option>
+                                    <option value="over65">Over 65</option>
+                                </select>
+                            </div>
+
+                        </div>
+            
+                        <!-- buttn -->
+                        <div class="paddig_topBottom-10">
+                            <button class="btn" id="bottoneGenera">Genera</button>
+                            <button class="btn" id="bottoneAnnulla">Annulla</button>
+                        </div>
     
-                <div class="row">
-                    <button class="btn" id="bottoneGenera">Genera</button>
-                    <button class="btn" id="bottoneAnnulla">Annulla</button>
-                </div>
-            </div>
-        </section>
+                    </div>
+                
+            </section>
 
-        <!-- Creazione bigletto -->
-        <section id="biglietto" class="hidden">
-            <h2 class="title">Il tuo biglietto</h2>
+            <!-- Creazione bigletto -->
+            <section id="biglietto" class="hidden">
+                <h2 class="title">Il tuo biglietto</h2>
 
-            <h3>Dettagli passeggeri</h3>
+                <h3>Dettagli passeggeri</h3>
 
-            <div class="contenuti">
-                <div class="nome">
-                    <h2>Nome Passeggero</h2>
-                    <h3 id="nome-passeggero"></h3>
+                <div class="contenuti">
+                    <div class="nome">
+                        <h2>Nome Passeggero</h2>
+                        <h3 id="nome-passeggero"></h3>
+                    </div>
+                    <div class="offerta">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Offerta</th>
+                                    <th>Carrozza</th>
+                                    <th>Codice CP</th>
+                                    <th>Costo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span id="offerta-applicata"></span>
+                                    </td>
+                                    <td>
+                                        <span id="carrozza"></span>
+                                    </td>
+                                    <td>
+                                        <span id="codice-cp"></span>
+                                    </td>
+                                    <td>
+                                        <span id="costo"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="offerta">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Offerta</th>
-                                <th>Carrozza</th>
-                                <th>Codice CP</th>
-                                <th>Costo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span id="offerta-applicata"></span>
-                                </td>
-                                <td>
-                                    <span id="carrozza"></span>
-                                </td>
-                                <td>
-                                    <span id="codice-cp"></span>
-                                </td>
-                                <td>
-                                    <span id="costo"></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+            </section>
+
+        </main>
     </div>
 
     <!-- JS -->
