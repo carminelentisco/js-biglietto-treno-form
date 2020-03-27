@@ -55,7 +55,7 @@ bottoneGenera.addEventListener('click',
         document.getElementById('costo').innerHTML = costoBiglietto;
 
         // Mostra biglietto
-        container.classList = 'show' + ' box-formatting';
+        container.classList = 'show' + ' box';
     }   
 );
 
